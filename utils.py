@@ -1,4 +1,5 @@
 import os
+import json
 import pandas as pd
 import tqdm
 from natsort import natsorted
@@ -122,3 +123,22 @@ def drop_first_feat (df):
 def remove_unimportant_features(df):
     cols = feat_drop(df, feats=['is_zero_util', 'pre_loans530', 'pre_loans_total_overdue', 'rn'])
     return df[cols]
+
+def create_samples(df):
+    # Создание папки для сохранения JSON файлов
+    output_dir = 'samples'
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Итерация по строкам DataFrame и сохранение каждой строки в отдельный JSON файл
+    for index, row in df.iterrows():
+        # Преобразование строки в словарь
+        row_dict = row.to_dict()
+        
+        # Определение имени файла
+        filename = f'{output_dir}/sample_{index}.json'
+        
+        # Сохранение данных в JSON файл
+        with open(filename, 'w', encoding='utf-8') as json_file:
+            json.dump(row_dict, json_file, ensure_ascii=False, indent=4)
+
+    print(f"Json samples create complete from {output_dir} directrory")

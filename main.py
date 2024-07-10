@@ -6,7 +6,7 @@ from fastapi import FastAPI
 import pandas as pd
 from pydantic import BaseModel
 from utils import create_samples
-
+from typing import Optional
 
 app = FastAPI()
 with open('models/pipe.pkl', 'rb') as file:
@@ -437,13 +437,13 @@ class Form(BaseModel):
     pre_loans530_8: int
     pre_loans530_9: int
     pre_loans530_17: int
-    flag: int
+    flag: Optional[int] = None
 
 
 class Prediction(BaseModel):
     id: int
     result: int
-    target: int
+    target: Optional[int] = None
 
 
 @app.get('/status')

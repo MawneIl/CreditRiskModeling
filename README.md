@@ -11,8 +11,8 @@
 
 ### Инструкции по запуску приложения для получения предсказаний
 1. Откройте терминал Bash.
-2. Клонируйте репозиторий проекта.<blockquote>git clone https://github.com/MawneIl/Analysis-of-the-SberAutosubscription.git</blockquote>
-3. Перейдите в корневой каталог проекта.<blockquote>cd SberAutosubscription</blockquote>
+2. Клонируйте репозиторий проекта.<blockquote>git clone https://github.com/MawneIl/CreditRiskModeling.git</blockquote>
+3. Перейдите в корневой каталог проекта.<blockquote>cd CreditRiskModeling</blockquote>
 4. Установите необходимые библиотеки, выполнив команду: <blockquote>pip install requirements.txt</blockquote>
 5. Запустите приложение командой: <blockquote>uvicorn main:app --reload</blockquote>
 6. Запустите локальное приложение Postman, либо перейдите по <a href="https://web.postman.co/">ссылке</a> и создайте новый запрос.

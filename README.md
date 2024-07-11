@@ -20,19 +20,19 @@
 ### Инструкции по запуску приложения для получения предсказаний
 1. Откройте терминал Bash.
 2. Клонируйте репозиторий проекта.
-```
+```bash
 git clone https://github.com/MawneIl/CreditRiskModeling.git
 ```
 3. Перейдите в корневой каталог проекта.
-```
+```bash
 cd CreditRiskModeling
 ```
 4. Установите необходимые библиотеки, выполнив команду:
-```
+```bash
 pip install requirements.txt
 ```
 5. Запустите приложение командой:
-```
+```bash
 uvicorn main:app --reload
 ```
 6. Запустите локальное приложение Postman, либо перейдите по <a href="https://web.postman.co/">ссылке</a> и создайте новый запрос.

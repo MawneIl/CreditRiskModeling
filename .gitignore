@@ -24,8 +24,11 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
 data/
 samples/*.json
+*.pdf
+*.pptx
 
 MANIFEST
 
